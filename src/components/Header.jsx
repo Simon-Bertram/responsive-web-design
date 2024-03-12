@@ -1,5 +1,6 @@
-import { Fragment, useState } from "react";
-import { Dialog, Disclosure, Popover, Transition } from "@headlessui/react";
+import { Fragment, useState } from "react"
+import Hero from "./Hero"
+import { Dialog, Disclosure, Popover, Transition } from "@headlessui/react"
 import {
   ArrowPathIcon,
   Bars3Icon,
@@ -8,12 +9,12 @@ import {
   FingerPrintIcon,
   SquaresPlusIcon,
   XMarkIcon,
-} from "@heroicons/react/24/outline";
+} from "@heroicons/react/24/outline"
 import {
   ChevronDownIcon,
   PhoneIcon,
   PlayCircleIcon,
-} from "@heroicons/react/20/solid";
+} from "@heroicons/react/20/solid"
 
 const products = [
   {
@@ -46,28 +47,34 @@ const products = [
     href: "#",
     icon: ArrowPathIcon,
   },
-];
+]
 const callsToAction = [
   { name: "Watch demo", href: "#", icon: PlayCircleIcon },
   { name: "Contact sales", href: "#", icon: PhoneIcon },
-];
+]
 
 function classNames(...classes) {
-  return classes.filter(Boolean).join(" ");
+  return classes.filter(Boolean).join(" ")
 }
 
 export default function Example() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
     <header className="bg-white">
+      <Hero />
       <nav
         className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8"
         aria-label="Global"
       >
         <div className="flex lg:flex-1">
-          <a href="#" className="-m-1.5 p-1.5">
+          <a
+            href="http://codifydesign.com"
+            className="-m-1.5 p-1.5"
+            title="Everyday Things"
+          >
             <span className="sr-only">Your Company</span>
+            Everyday Things
             <img
               className="h-8 w-auto"
               src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
@@ -254,5 +261,5 @@ export default function Example() {
         </Dialog.Panel>
       </Dialog>
     </header>
-  );
+  )
 }
