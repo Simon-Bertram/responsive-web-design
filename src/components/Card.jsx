@@ -1,10 +1,10 @@
-const Card = ({ children, icon, title }) => {
+const Card = ({ children, icon, title, className = "" }) => {
   return (
-    <div className="card">
+    <div className={`card ${className}`}>
       {title && (
-        <h2>
+        <h3>
           <a href="">{title}</a>
-        </h2>
+        </h3>
       )}
       {children}
     </div>
