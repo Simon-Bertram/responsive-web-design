@@ -2,7 +2,16 @@
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    extend: {},
+    container: {
+      padding: {
+        sm: "1rem",
+      },
+    },
+    extend: {
+      fontFamily: {
+        sans: ["Inter var", "Inter", "sans-serif"],
+        openSans: ["Open Sans", "sans-serif"],
+      },
+    },
   },
-  plugins: [],
-};
+}

@@ -8,10 +8,9 @@ function App() {
   return (
     <div id="page">
       <Header />
-      <h1 className="text-3xl">My site</h1>
       <MainSection />
-      <HowToSection />
       <AtmosphereSection />
+      <HowToSection />
       <Footer />
     </div>
   )

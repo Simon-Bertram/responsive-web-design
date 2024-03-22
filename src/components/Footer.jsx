@@ -1,8 +1,10 @@
 const Footer = () => {
   return (
     <footer>
-      <p>CopyRight &copy; 2021</p>
-      <p>Terms of Service | Privacy Policy</p>
+      <div className="container mx-auto">
+        <p>CopyRight &copy; 2024</p>
+        <p>Terms of Service | Privacy Policy</p>
+      </div>
     </footer>
   )
 }

@@ -1,19 +1,68 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap") */
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
+  body {
+    @apply font-openSans antialiased;
+  }
   h1 {
-    @apply text-4xl;
+    @apply text-4xl mb-4;
   }
   h2 {
-    @apply text-2xl;
+    @apply text-2xl mb-3;
   }
   h3 {
-    @apply text-xl;
+    @apply text-xl mb-2;
   }
   a {
     @apply text-blue-600 dark:text-blue-500 hover:underline
-      font-medium;
+      font-medium underline-offset-4;
   }
+  section {
+    @apply px-4;
+  }
+}
+
+@layer components {
+  /* header {
+    @apply flex flex-col h-[430px];
+  }
+  header nav {
+    @apply z-10 order-first bg-transparent;
+  } */
+  header a.logo {
+    @apply absolute top-4 left-5 block w-40 h-[66px]
+    bg-[url('graphics/logo.svg')] bg-no-repeat bg-contain
+     text-white text-4xl font-bold;
+  }
+  .hero-image-container {
+    @apply w-full h-full bg-cover bg-center bg-no-repeat;
+  }
+  .hero-image {
+    @apply bg-cover bg-center bg-no-repeat;
+  }
+  .hero-branding {
+    @apply absolute w-[42%] top-32 left-[55%] text-white;
+  }
+  header .header-title {
+    @apply text-white text-4xl font-bold mb-7 leading-4;
+  }
+
+  .btn a {
+    @apply no-underline;
+  }
+  .btn {
+    @apply py-2 px-6 rounded-md border-2 
+    text-white border-white hover:bg-black/30
+    transition-opacity duration-300 ease-in-out;
+  }
+  .main-card {
+    @apply p-2 mx-6 text-center;
+  }
+}
+
+@layer utilities {
 }

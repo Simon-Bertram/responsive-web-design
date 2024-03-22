@@ -26,12 +26,43 @@ const MainSection = () => {
     </p>
   )
 
+  const starIcon = (
+    <img src="public/graphics/icon_star.svg" alt="A golden star" />
+  )
+  const gearIcon = (
+    <img src="public/graphics/icon_gear.svg" alt="A golden gear" />
+  )
+  const markerIcon = (
+    <img src="public/graphics/icon_marker.svg" alt="A golden marker" />
+  )
+
   return (
-    <section>
-      <h2>Main Section</h2>
-      <Card title="What's trending">{firstAside}</Card>
-      <Card title="Where to find it">{secondAside}</Card>
-      <Card title="Tools of the trade">{thirdAside}</Card>
+    <section className="container mx-auto mt-12 mb-8">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div className="">
+          <Card className="main-card" title="What's trending" icon={starIcon}>
+            {firstAside}
+          </Card>
+        </div>
+        <div className="">
+          <Card
+            className="main-card"
+            title="Where to find it"
+            icon={markerIcon}
+          >
+            {secondAside}
+          </Card>
+        </div>
+        <div className="">
+          <Card
+            className="main-card"
+            title="Tools of the trade"
+            icon={gearIcon}
+          >
+            {thirdAside}
+          </Card>
+        </div>
+      </div>
     </section>
   )
 }
