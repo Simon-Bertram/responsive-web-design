@@ -1,12 +1,14 @@
 import PropTypes from "prop-types"
 
-const CardHowTo = ({ children, image, title, className = "" }) => {
+const CardHowTo = ({ children, img, alt, title, className = "" }) => {
   return (
     <div className={`card ${className}`}>
-      <div className="flex w-16 mx-auto mb-4">{image}</div>
+      {img && <img src={img} alt={alt} className="mb-5" />}
       {title && (
         <h3>
-          <a href="">{title}</a>
+          <a href="" className="text-black font-bold">
+            {title}
+          </a>
         </h3>
       )}
       {children}
@@ -16,7 +18,8 @@ const CardHowTo = ({ children, image, title, className = "" }) => {
 
 CardHowTo.propTypes = {
   children: PropTypes.node.isRequired,
-  image: PropTypes.string,
+  img: PropTypes.string,
+  alt: PropTypes.string,
   title: PropTypes.string.isRequired,
   className: PropTypes.string,
 }

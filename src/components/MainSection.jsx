@@ -39,12 +39,22 @@ const MainSection = () => {
   return (
     <section className="container mx-auto mt-12 mb-8">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-        <div className="">
+        <a
+          href=""
+          className="text-gray-900"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <Card className="main-card" title="What's trending" icon={starIcon}>
             {firstAside}
           </Card>
-        </div>
-        <div className="">
+        </a>
+        <a
+          href=""
+          className="text-gray-900"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <Card
             className="main-card"
             title="Where to find it"
@@ -52,8 +62,13 @@ const MainSection = () => {
           >
             {secondAside}
           </Card>
-        </div>
-        <div className="">
+        </a>
+        <a
+          href=""
+          className="text-gray-900"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <Card
             className="main-card"
             title="Tools of the trade"
@@ -61,7 +76,7 @@ const MainSection = () => {
           >
             {thirdAside}
           </Card>
-        </div>
+        </a>
       </div>
     </section>
   )

@@ -18,7 +18,7 @@
     @apply text-xl mb-2;
   }
   a {
-    @apply text-blue-600 dark:text-blue-500 hover:underline
+    @apply text-blue-600 dark:text-blue-500 
       font-medium underline-offset-4;
   }
   section {
@@ -48,7 +48,7 @@
     @apply absolute w-[42%] top-32 left-[55%] text-white;
   }
   header .header-title {
-    @apply text-white text-4xl font-bold mb-7 leading-4;
+    @apply text-white text-4xl font-bold leading-4;
   }
 
   .btn a {
